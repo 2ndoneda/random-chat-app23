@@ -40,13 +40,7 @@ export default function BottomNavBar() {
 
   return (
     <nav
-      style={{
-        background: "linear-gradient(to right, #F44B7F, #FFB6B9, #FF6661)",
-        borderTop: "4px solid #F44B7F",
-        borderRadius: "24px 24px 0 0", 
-        boxShadow: "0 25px 50px -12px rgba(244, 75, 127, 0.4)",
-      }}
-      className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md flex justify-around items-center h-16 sm:h-18 lg:h-20 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto"
+      className="fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md flex justify-around items-center h-16 sm:h-18 lg:h-20 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-gradient-to-r from-flamingo-pink via-blush-peach to-coral-orange border-t-4 border-flamingo-pink rounded-t-3xl shadow-2xl"
     >
       {navItems.map((item) => {
         const IconComponent = item.icon;
@@ -61,43 +55,29 @@ export default function BottomNavBar() {
           >
             {/* Active background glow */}
             {isActive && (
-              <div className="absolute inset-0 rounded-2xl blur-sm shadow-lg" style={{background: 'linear-gradient(135deg, rgba(244, 75, 127, 0.4), rgba(255, 182, 185, 0.3), rgba(255, 102, 97, 0.4))'}} />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 via-white/30 to-white/20 blur-sm shadow-lg" />
             )}
 
             {/* Icon container with beautiful styling */}
             <div
               className={`relative p-2 sm:p-2.5 rounded-xl transition-all duration-300 ${
                 isActive
-                  ? "shadow-lg"
-                  : "bg-gradient-to-br from-gray-100/80 to-gray-200/60"
+                  ? "bg-white/90 shadow-lg"
+                  : "bg-white/20 backdrop-blur-sm"
               }`}
-              style={isActive ? {
-                background: 'linear-gradient(135deg, #F44B7F, #FFB6B9, #FF6661)',
-                boxShadow: '0 4px 14px 0 rgba(244, 75, 127, 0.4)'
-              } : {}}
             >
               <IconComponent
                 size={18}
-                style={{
-                  color: isActive ? "#ffffff" : "#C4C4C4",
-                  filter: isActive 
-                    ? "drop-shadow(0 1px 2px rgba(244, 75, 127, 0.3))" 
-                    : "drop-shadow(0 1px 1px rgba(196, 196, 196, 0.2))",
-                }}
-                className="sm:w-5 sm:h-5 lg:w-6 lg:h-6 transition-colors duration-300"
+                className={`sm:w-5 sm:h-5 lg:w-6 lg:h-6 transition-colors duration-300 ${
+                  isActive ? "text-flamingo-pink" : "text-white/80"
+                }`}
               />
             </div>
 
             {/* Label with beautiful styling */}
             <span
-              style={{
-                color: isActive ? "#F44B7F" : "#C4C4C4",
-                textShadow: isActive 
-                  ? "0 1px 2px rgba(244, 75, 127, 0.3)" 
-                  : "0 1px 1px rgba(196, 196, 196, 0.2)",
-              }}
               className={`text-[10px] sm:text-xs lg:text-sm leading-none mt-1 transition-colors duration-300 ${
-                isActive ? "font-extrabold" : "font-medium"
+                isActive ? "font-extrabold text-white" : "font-medium text-white/80"
               }`}
             >
               {item.label}
@@ -105,7 +85,7 @@ export default function BottomNavBar() {
 
             {/* Active indicator dot */}
             {isActive && (
-              <div className="absolute -top-1 right-1/2 transform translate-x-1/2 w-2 h-2 rounded-full shadow-md animate-pulse" style={{background: 'linear-gradient(90deg, #F44B7F, #FF6661)'}} />
+              <div className="absolute -top-1 right-1/2 transform translate-x-1/2 w-2 h-2 bg-white rounded-full shadow-md animate-pulse" />
             )}
           </button>
         );

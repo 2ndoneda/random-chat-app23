@@ -171,8 +171,7 @@ export default function Home() {
           {t("app.name")} - Random Video Chat - Live chat with ajnabis
         </title>
       </Helmet>
-      <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-gradient-to-br from-peach-25 via-cream-50 to-blush-50 relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
-        <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-snow-white relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
+      <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-snow-white relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
           {/* Enhanced Animated Background Elements with Indian flair */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-6 sm:top-10 left-6 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-flamingo-pink to-coral-orange rounded-full opacity-20 animate-pulse"></div>
@@ -187,33 +186,33 @@ export default function Home() {
             ></div>
             {/* Add romantic Indian symbols */}
             <div
-              className="absolute top-16 sm:top-20 right-16 sm:right-20 text-lg sm:text-xl lg:text-2xl opacity-40 animate-pulse"
-              style={{ color: '#F44B7F', animationDelay: "0.5s" }}
+              className="absolute top-16 sm:top-20 right-16 sm:right-20 text-flamingo-pink text-lg sm:text-xl lg:text-2xl opacity-40 animate-pulse"
+              style={{ animationDelay: "0.5s" }}
             >
               💕
             </div>
             <div
-              className="absolute bottom-64 sm:bottom-80 left-12 sm:left-16 text-base sm:text-lg lg:text-xl opacity-35 animate-bounce"
-              style={{ color: '#FF6661', animationDelay: "1.5s" }}
+              className="absolute bottom-64 sm:bottom-80 left-12 sm:left-16 text-coral-orange text-base sm:text-lg lg:text-xl opacity-35 animate-bounce"
+              style={{ animationDelay: "1.5s" }}
             >
               🌸
             </div>
             <div
-              className="absolute top-48 sm:top-60 left-6 sm:left-8 text-sm sm:text-base lg:text-lg opacity-30 animate-pulse"
-              style={{ color: '#F7C773', animationDelay: "2.5s" }}
+              className="absolute top-48 sm:top-60 left-6 sm:left-8 text-soft-gold text-sm sm:text-base lg:text-lg opacity-30 animate-pulse"
+              style={{ animationDelay: "2.5s" }}
             >
               ✨
             </div>
             <div
-              className="absolute top-64 sm:top-80 right-4 sm:right-6 text-xs sm:text-sm lg:text-base opacity-25 animate-bounce"
-              style={{ color: '#FFB6B9', animationDelay: "3s" }}
+              className="absolute top-64 sm:top-80 right-4 sm:right-6 text-blush-peach text-xs sm:text-sm lg:text-base opacity-25 animate-bounce"
+              style={{ animationDelay: "3s" }}
             >
               🪷
             </div>
           </div>
 
           {/* Enhanced Header with Indian romantic colors */}
-          <header className="w-full shadow-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-6 relative overflow-hidden" style={{ background: `linear-gradient(to right, #F44B7F, #FFB6B9, #FF6661)` }}>
+          <header className="w-full bg-gradient-to-r from-flamingo-pink via-blush-peach to-coral-orange shadow-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-6 relative overflow-hidden">
             {/* Header Background Pattern with Indian touch */}
             <div className="absolute inset-0 bg-gradient-to-r from-white/15 via-white/25 to-white/15 backdrop-blur-sm"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
@@ -227,8 +226,8 @@ export default function Home() {
                     {t("app.name")}
                   </h1>
                   {isPremium && (
-                    <div className="flex items-center gap-1 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-md" style={{ background: `linear-gradient(to right, #F7C773, #8E44AD)` }}>
-                      <Crown className="h-3 w-3 sm:h-4 sm:w-4" style={{ color: '#FFFFFF' }} />
+                    <div className="flex items-center gap-1 bg-gradient-to-r from-soft-gold to-royal-violet px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-md">
+                      <Crown className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                       <span className="text-white text-xs font-bold">PREMIUM</span>
                     </div>
                   )}
@@ -242,20 +241,16 @@ export default function Home() {
                     className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold p-2 sm:p-2.5 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 border border-white/30"
                     title="Settings & Profile"
                   >
-                    <Settings className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#FFFFFF' }} />
+                    <Settings className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </Button>
 
                   {/* Coins Button */}
                   <Button
                     onClick={() => setShowTreasureChest(true)}
                     disabled={coinsLoading}
-                    className="font-semibold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 text-sm sm:text-base"
-                    style={{ 
-                      background: `linear-gradient(to right, #F7C773, #FF6661)`,
-                      color: '#FFFFFF'
-                    }}
+                    className="bg-gradient-to-r from-soft-gold to-coral-orange text-white font-semibold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 text-sm sm:text-base"
                   >
-                    <Coins className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" style={{ color: '#FFFFFF' }} />
+                    <Coins className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 text-white" />
                     {coinsLoading ? "..." : coins}
                   </Button>
                 </div>
@@ -267,9 +262,9 @@ export default function Home() {
                   onClick={handleVoiceChat}
                   className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 border border-white/30 text-sm sm:text-base min-w-[200px]"
                 >
-                  <Mic className="h-4 w-4 sm:h-5 sm:w-5 mr-2" style={{ color: '#FFFFFF' }} />
+                  <Mic className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-white" />
                   <span>Voice Match Mode</span>
-                  <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 ml-2" style={{ color: '#FFFFFF' }} />
+                  <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 ml-2 text-white" />
                 </Button>
               </div>
             </div>
@@ -330,27 +325,20 @@ export default function Home() {
 
             {/* Friends vs AI Chat Tab Switcher */}
             <div className="w-full mb-6 sm:mb-8">
-              <div className="backdrop-blur-sm rounded-2xl p-2 shadow-lg border" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', borderColor: '#F44B7F' }}>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-flamingo-pink">
                 <div className="grid grid-cols-2 gap-1">
                   <button
                     onClick={() => setActiveTab("friends")}
                     className={`flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform ${
                       activeTab === "friends"
-                        ? "text-white shadow-lg scale-105"
-                        : "hover:bg-opacity-50"
+                        ? "bg-gradient-to-r from-flamingo-pink to-blush-peach text-white shadow-lg scale-105"
+                        : "text-gunmetal-gray hover:text-flamingo-pink hover:bg-blush-peach/10"
                     }`}
-                    style={activeTab === "friends" ? {
-                      background: `linear-gradient(to right, #F44B7F, #FFB6B9)`,
-                      color: '#FFFFFF'
-                    } : {
-                      color: '#2FF2FF',
-                      backgroundColor: 'transparent'
-                    }}
                   >
-                    <Users className="h-5 w-5" style={{ color: activeTab === "friends" ? '#FFFFFF' : '#2FF2FF' }} />
+                    <Users className={`h-5 w-5 ${activeTab === "friends" ? "text-white" : "text-gunmetal-gray"}`} />
                     <span>Meet Friends</span>
                     {activeTab === "friends" && (
-                      <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#FFFFFF' }}></div>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                     )}
                   </button>
                   
@@ -358,28 +346,21 @@ export default function Home() {
                     onClick={() => setActiveTab("ai")}
                     className={`flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold transition-all duration-300 transform ${
                       activeTab === "ai"
-                        ? "text-white shadow-lg scale-105"
-                        : "hover:bg-opacity-50"
+                        ? "bg-gradient-to-r from-royal-violet to-flamingo-pink text-white shadow-lg scale-105"
+                        : "text-gunmetal-gray hover:text-royal-violet hover:bg-royal-violet/10"
                     }`}
-                    style={activeTab === "ai" ? {
-                      background: `linear-gradient(to right, #8E44AD, #2FF2FF)`,
-                      color: '#FFFFFF'
-                    } : {
-                      color: '#2FF2FF',
-                      backgroundColor: 'transparent'
-                    }}
                   >
-                    <Bot className="h-5 w-5" style={{ color: activeTab === "ai" ? '#FFFFFF' : '#2FF2FF' }} />
+                    <Bot className={`h-5 w-5 ${activeTab === "ai" ? "text-white" : "text-gunmetal-gray"}`} />
                     <span>AI Chat</span>
                     {activeTab === "ai" && (
-                      <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#FFFFFF' }}></div>
+                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                     )}
                   </button>
                 </div>
                 
                 {/* Tab Description */}
                 <div className="mt-3 text-center">
-                  <p className="text-sm font-medium" style={{ color: '#2FF2FF' }}>
+                  <p className="text-sm text-gunmetal-gray font-medium">
                     {activeTab === "friends" 
                       ? "💕 Connect with real people and make lasting friendships"
                       : "🤖 Chat with AI assistant for practice and fun conversations"
@@ -398,16 +379,12 @@ export default function Home() {
                       ? "hover:scale-105 hover:shadow-3xl hover:animate-bounce"
                       : "hover:scale-105 hover:shadow-3xl hover:animate-bounce"
                 }`}
-                style={isConnecting ? {
-                  background: `linear-gradient(to right, #FFB6B9, #FF6661)`,
-                  color: '#FFFFFF'
-                } : activeTab === "friends" ? {
-                  background: `linear-gradient(to right, #F44B7F, #FFB6B9, #FF6661)`,
-                  color: '#FFFFFF'
-                } : {
-                  background: `linear-gradient(to right, #8E44AD, #2FF2FF, #F44B7F)`,
-                  color: '#FFFFFF'
-                }}
+                style={isConnecting 
+                  ? { background: "linear-gradient(to right, #FFB6B9, #FF6661)" }
+                  : activeTab === "friends" 
+                    ? { background: "linear-gradient(to right, #F44B7F, #FFB6B9, #FF6661)" }
+                    : { background: "linear-gradient(to right, #8E44AD, #FFB6B9, #F44B7F)" }
+                }
                 onClick={activeTab === "friends" ? handleStartCall : () => navigate("/ai-chatbot")}
                 disabled={isConnecting}
                 title={activeTab === "friends" ? "Takes <10 seconds to find your perfect match" : "Start chatting with AI assistant"}
@@ -419,17 +396,17 @@ export default function Home() {
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   {activeTab === "friends" ? (
                     <>
-                      <div className="absolute top-2 left-4 text-lg animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '0s'}}>💕</div>
-                      <div className="absolute top-4 right-6 text-sm animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '0.5s'}}>✨</div>
-                      <div className="absolute bottom-3 left-8 text-base animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '1s'}}>💖</div>
-                      <div className="absolute bottom-2 right-4 text-xs animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '1.5s'}}>🌟</div>
+                      <div className="absolute top-2 left-4 text-white/30 text-lg animate-bounce" style={{animationDelay: '0s'}}>💕</div>
+                      <div className="absolute top-4 right-6 text-white/30 text-sm animate-bounce" style={{animationDelay: '0.5s'}}>✨</div>
+                      <div className="absolute bottom-3 left-8 text-white/30 text-base animate-bounce" style={{animationDelay: '1s'}}>💖</div>
+                      <div className="absolute bottom-2 right-4 text-white/30 text-xs animate-bounce" style={{animationDelay: '1.5s'}}>🌟</div>
                     </>
                   ) : (
                     <>
-                      <div className="absolute top-2 left-4 text-lg animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '0s'}}>🤖</div>
-                      <div className="absolute top-4 right-6 text-sm animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '0.5s'}}>💬</div>
-                      <div className="absolute bottom-3 left-8 text-base animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '1s'}}>🧠</div>
-                      <div className="absolute bottom-2 right-4 text-xs animate-bounce" style={{color: 'rgba(255, 255, 255, 0.3)', animationDelay: '1.5s'}}>⚡</div>
+                      <div className="absolute top-2 left-4 text-white/30 text-lg animate-bounce" style={{animationDelay: '0s'}}>🤖</div>
+                      <div className="absolute top-4 right-6 text-white/30 text-sm animate-bounce" style={{animationDelay: '0.5s'}}>💬</div>
+                      <div className="absolute bottom-3 left-8 text-white/30 text-base animate-bounce" style={{animationDelay: '1s'}}>🧠</div>
+                      <div className="absolute bottom-2 right-4 text-white/30 text-xs animate-bounce" style={{animationDelay: '1.5s'}}>⚡</div>
                     </>
                   )}
                 </div>
@@ -444,16 +421,16 @@ export default function Home() {
                     <>
                       {activeTab === "friends" ? (
                         <>
-                          <Heart className="h-6 w-6 sm:h-7 sm:w-7 animate-pulse" style={{ color: '#FFFFFF' }} />
+                          <Heart className="h-6 w-6 sm:h-7 sm:w-7 text-white animate-pulse" />
                           <span>{t("home.start")}</span>
                         </>
                       ) : (
                         <>
-                          <Bot className="h-6 w-6 sm:h-7 sm:w-7 animate-pulse" style={{ color: '#FFFFFF' }} />
+                          <Bot className="h-6 w-6 sm:h-7 sm:w-7 text-white animate-pulse" />
                           <span>Start AI Chat</span>
                         </>
                       )}
-                      <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 animate-pulse" style={{ color: '#FFFFFF' }} />
+                      <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-white animate-pulse" />
                     </>
                   )}
                 </div>
@@ -461,7 +438,7 @@ export default function Home() {
               
               {/* Tooltip-like text below button */}
               <div className="text-center mt-3">
-                <p className="text-xs sm:text-sm font-medium animate-pulse" style={{ color: '#2FF2FF' }}>
+                <p className="text-xs sm:text-sm text-gunmetal-gray font-medium animate-pulse">
                   {activeTab === "friends" 
                     ? "⚡ Takes less than 10 seconds to find your perfect match"
                     : "🤖 Instant AI responses - practice your conversation skills"
@@ -475,30 +452,25 @@ export default function Home() {
               <div className="w-full mb-4 sm:mb-6">
                 <Button
                   onClick={() => navigate("/friends")}
-                  className="w-full backdrop-blur-sm border hover:shadow-lg transition-all duration-300 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base"
-                  style={{ 
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    color: '#2FF2FF',
-                    borderColor: '#FFB6B9'
-                  }}
+                  className="w-full bg-white/80 backdrop-blur-sm text-gunmetal-gray border border-blush-peach hover:bg-white hover:shadow-lg transition-all duration-300 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-sm sm:text-base"
                 >
-                  <Users className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" style={{ color: '#F44B7F' }} />
+                  <Users className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2 text-flamingo-pink" />
                   <span className="font-semibold">View My Friends</span>
                 </Button>
               </div>
             )}
 
             {/* Footer Text */}
-            <div className="text-xs sm:text-sm text-center px-2 sm:px-4 leading-relaxed" style={{ color: '#2FF2FF' }}>
+            <div className="text-xs sm:text-sm text-center text-gunmetal-gray px-2 sm:px-4 leading-relaxed">
               By using AjnabiCam, you agree to our Terms of Service and Privacy
               Policy.
               <br className="hidden sm:block" />
               <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mt-1 sm:mt-0">
-                <span className="font-medium" style={{ color: '#F44B7F' }}>✓ Safe & Secure</span>
-                <span style={{ color: '#2FF2FF' }}>•</span>
-                <span className="font-medium" style={{ color: '#FFB6B9' }}>24/7 Support</span>
-                <span style={{ color: '#2FF2FF' }}>•</span>
-                <span className="font-medium" style={{ color: '#FF6661' }}>
+                <span className="text-flamingo-pink font-medium">✓ Safe & Secure</span>
+                <span className="text-gunmetal-gray">•</span>
+                <span className="text-blush-peach font-medium">24/7 Support</span>
+                <span className="text-gunmetal-gray">•</span>
+                <span className="text-coral-orange font-medium">
                   Find True Love
                 </span>
               </div>
@@ -508,13 +480,12 @@ export default function Home() {
           {/* Floating Coin Store Button with Indian colors */}
           <button
             onClick={() => setShowTreasureChest(true)}
-            className="fixed bottom-20 sm:bottom-24 lg:bottom-28 right-3 sm:right-4 lg:right-6 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-40 animate-pulse"
-            style={{ background: `linear-gradient(to right, #F44B7F, #FFB6B9, #FF6661)` }}
+            className="fixed bottom-20 sm:bottom-24 lg:bottom-28 right-3 sm:right-4 lg:right-6 bg-gradient-to-r from-flamingo-pink via-blush-peach to-coral-orange text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-40 animate-pulse"
           >
             <div className="relative">
-              <Coins className="h-5 w-5 sm:h-6 sm:w-6" style={{ color: '#FFFFFF' }} />
+              <Coins className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               {coins > 0 && (
-                <div className="absolute -top-1.5 sm:-top-2 -right-1.5 sm:-right-2 text-white text-xs font-bold rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center shadow-md" style={{ backgroundColor: '#F44B7F' }}>
+                <div className="absolute -top-1.5 sm:-top-2 -right-1.5 sm:-right-2 bg-flamingo-pink text-white text-xs font-bold rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center shadow-md">
                   {coins > 99 ? "99+" : coins}
                 </div>
               )}
@@ -522,7 +493,6 @@ export default function Home() {
           </button>
 
           <BottomNavBar />
-        </main>
 
         <PremiumPaywall
           isOpen={showPaywall}

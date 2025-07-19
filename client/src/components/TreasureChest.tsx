@@ -218,17 +218,17 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
 
   return (
     <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-start justify-center z-50 p-2 overflow-y-auto">
-      <Card className="w-full max-w-lg mx-auto bg-gradient-to-br from-sindoor-25 via-gulmohar-25 to-jasmine-25 border-2 border-sindoor-200 shadow-3xl relative overflow-hidden my-2 min-h-fit max-h-[98vh]">
+      <Card className="w-full max-w-lg mx-auto bg-gradient-to-br from-white via-blush-peach/10 to-coral-orange/10 border-2 border-flamingo-pink/30 shadow-3xl relative overflow-hidden my-2 min-h-fit max-h-[98vh]">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-4 left-4 w-8 h-8 bg-jasmine-200 rounded-full opacity-30 animate-pulse"></div>
-          <div className="absolute top-12 right-8 w-6 h-6 bg-gulmohar-200 rounded-full opacity-40 animate-bounce"></div>
+          <div className="absolute top-4 left-4 w-8 h-8 bg-soft-gold/30 rounded-full opacity-30 animate-pulse"></div>
+          <div className="absolute top-12 right-8 w-6 h-6 bg-coral-orange/30 rounded-full opacity-40 animate-bounce"></div>
           <div
-            className="absolute bottom-16 left-8 w-4 h-4 bg-sindoor-200 rounded-full opacity-25 animate-pulse"
+            className="absolute bottom-16 left-8 w-4 h-4 bg-flamingo-pink/30 rounded-full opacity-25 animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="absolute bottom-8 right-4 w-5 h-5 bg-henna-200 rounded-full opacity-30 animate-bounce"
+            className="absolute bottom-8 right-4 w-5 h-5 bg-blush-peach/30 rounded-full opacity-30 animate-bounce"
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
@@ -238,7 +238,7 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
             variant="ghost"
             size="sm"
             onClick={onClose}
-            className="absolute right-2 top-2 p-2 text-sindoor-500 hover:bg-sindoor-100 rounded-full transition-all duration-200 hover:scale-110"
+            className="absolute right-2 top-2 p-2 text-gunmetal-gray hover:bg-flamingo-pink/10 rounded-full transition-all duration-200 hover:scale-110"
           >
             <X size={22} />
           </Button>
@@ -248,34 +248,34 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
             <div
               className={`relative ${isAnimating ? "animate-bounce" : ""} transform hover:scale-110 transition-transform duration-300`}
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-sindoor-400 via-gulmohar-500 to-jasmine-400 rounded-2xl relative overflow-hidden shadow-2xl border-3 border-jasmine-300 flex items-center justify-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-flamingo-pink via-coral-orange to-soft-gold rounded-2xl relative overflow-hidden shadow-2xl border-3 border-soft-gold/50 flex items-center justify-center">
                 <Diamond className="h-12 w-12 text-white drop-shadow-lg" />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/10 rounded-2xl"></div>
                 {isAnimating && (
                   <>
-                    <div className="absolute -top-3 -left-3 text-jasmine-300 text-xl animate-ping">
+                    <div className="absolute -top-3 -left-3 text-soft-gold text-xl animate-ping">
                       ✨
                     </div>
                     <div
-                      className="absolute -top-4 -right-2 text-sindoor-300 text-lg animate-ping"
+                      className="absolute -top-4 -right-2 text-flamingo-pink/70 text-lg animate-ping"
                       style={{ animationDelay: "0.2s" }}
                     >
                       💎
                     </div>
                     <div
-                      className="absolute -top-2 left-1/2 text-gulmohar-300 text-lg animate-ping"
+                      className="absolute -top-2 left-1/2 text-coral-orange/70 text-lg animate-ping"
                       style={{ animationDelay: "0.4s" }}
                     >
                       ✨
                     </div>
                     <div
-                      className="absolute -bottom-1 -left-2 text-jasmine-400 text-sm animate-ping"
+                      className="absolute -bottom-1 -left-2 text-soft-gold/80 text-sm animate-ping"
                       style={{ animationDelay: "0.6s" }}
                     >
                       💫
                     </div>
                     <div
-                      className="absolute -bottom-2 -right-1 text-sindoor-400 text-sm animate-ping"
+                      className="absolute -bottom-2 -right-1 text-flamingo-pink/80 text-sm animate-ping"
                       style={{ animationDelay: "0.8s" }}
                     >
                       ✨
@@ -286,15 +286,15 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
             </div>
           </div>
 
-          <CardTitle className="text-2xl font-extrabold bg-gradient-to-r from-sindoor-600 via-gulmohar-600 to-jasmine-600 bg-clip-text text-transparent mb-2">
+          <CardTitle className="text-2xl font-extrabold bg-gradient-to-r from-flamingo-pink via-coral-orange to-soft-gold bg-clip-text text-transparent mb-2">
             💰 Coin Store 💰
           </CardTitle>
 
           {/* Current Balance */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 inline-block border-2 border-sindoor-300 shadow-lg">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 inline-block border-2 border-flamingo-pink/30 shadow-lg">
             <div className="flex items-center gap-2">
-              <Coins className="h-5 w-5 text-sindoor-600 animate-pulse" />
-              <span className="font-extrabold text-lg text-sindoor-700">
+              <Coins className="h-5 w-5 text-flamingo-pink animate-pulse" />
+              <span className="font-extrabold text-lg text-gunmetal-gray">
                 {coins} Coins
               </span>
             </div>
@@ -302,7 +302,7 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
 
           {/* Urgency Timer */}
           {showLimitedOffer && (
-            <div className="bg-gradient-to-r from-sindoor-500 to-gulmohar-500 text-white rounded-full px-4 py-2 mt-2 inline-block animate-pulse">
+            <div className="bg-gradient-to-r from-flamingo-pink to-coral-orange text-white rounded-full px-4 py-2 mt-2 inline-block animate-pulse">
               <div className="flex items-center gap-2 text-sm font-bold">
                 <Clock className="h-4 w-4" />
                 <span>{urgencyMessage}</span>
@@ -318,7 +318,7 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
                 onClose();
                 navigate("/spin-wheel");
               }}
-              className="bg-gradient-to-r from-sindoor-500 via-gulmohar-500 to-jasmine-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-flamingo-pink via-coral-orange to-soft-gold text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               style={{ animation: "bounce 1s infinite" }}
             >
               <div className="flex items-center gap-2">
@@ -327,7 +327,7 @@ export default function TreasureChest({ isOpen, onClose }: TreasureChestProps) {
                 <ExternalLink className="h-4 w-4" />
               </div>
             </button>
-            <div className="text-xs text-sindoor-600 font-semibold mt-1 bg-sindoor-100 rounded-full px-3 py-1 inline-block">
+            <div className="text-xs text-flamingo-pink font-semibold mt-1 bg-flamingo-pink/10 rounded-full px-3 py-1 inline-block">
               ✨ Try your luck! Watch ads to win up to 50 coins! ✨
             </div>
           </div>
