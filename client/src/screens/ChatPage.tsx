@@ -232,11 +232,11 @@ const PersonalChat = ({
       {/* Enhanced Header */}
       <div className="p-4 bg-gradient-to-r from-flamingo-600 via-blush-600 to-royal-600 flex items-center shadow-lg relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/15 via-transparent to-transparent"></div>
 
         <button
           onClick={onBack}
-          className="mr-3 text-white hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/20"
+          className="mr-3 text-white hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/15"
           aria-label="Go back"
         >
           <ArrowLeft size={24} />
@@ -250,7 +250,7 @@ const PersonalChat = ({
           <div className="flex items-center gap-2">
             <span className="font-bold text-white text-lg">{chat.name}</span>
             {chat.isFriend && (
-              <span className="bg-emerald-400/20 backdrop-blur-sm text-emerald-100 text-xs px-2 py-1 rounded-full font-semibold border border-emerald-300/30">
+              <span className="backdrop-blur-sm text-white text-xs px-2 py-1 rounded-full font-semibold border border-white/30" style={{backgroundColor: 'rgba(142, 68, 173, 0.3)'}}>
                 Friend
               </span>
             )}
@@ -270,7 +270,7 @@ const PersonalChat = ({
         <div className="relative">
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="text-white hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/20"
+            className="text-white hover:scale-110 transition-all duration-200 p-2 rounded-full hover:bg-white/15"
           >
             <MoreVertical size={20} />
           </button>
@@ -282,15 +282,15 @@ const PersonalChat = ({
                   setShowWallpaperModal(true);
                   setShowMenu(false);
                 }}
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 w-full text-left transition-colors"
+                className="flex items-center gap-3 px-4 py-3 hover:w-full text-left transition-colors" style={{color: '#2FF2FF', backgroundColor: 'rgba(244, 75, 127, 0.05)'}}
               >
-                <Palette size={18} className="text-violet-600" />
+                <Palette size={18} style={{color: '#F44B7F'}} />
                 <span className="font-medium">Set Wallpaper</span>
               </button>
               <div className="border-t border-gray-100"></div>
               <button
                 onClick={() => setShowMenu(false)}
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-50 w-full text-left transition-colors"
+                className="flex items-center gap-3 px-4 py-3 hover:w-full text-left transition-colors" style={{color: '#2FF2FF', backgroundColor: 'rgba(244, 75, 127, 0.05)'}}
               >
                 <X size={18} className="text-gray-400" />
                 <span className="font-medium">Close</span>
@@ -326,9 +326,10 @@ const PersonalChat = ({
               <div
                 className={`px-4 py-3 rounded-2xl max-w-xs shadow-sm transition-all duration-200 hover:shadow-md ${
                   msg.fromMe
-                    ? "bg-gradient-to-r from-flamingo-500 to-blush-600 text-white"
+                    ? "text-white"
                     : "bg-white/90 backdrop-blur-sm text-gray-800 border border-gray-100"
                 }`}
+                style={msg.fromMe ? {background: 'linear-gradient(90deg, #F44B7F, #FFB6B9)'} : {}}
               >
                 <div className="leading-relaxed">{msg.text}</div>
                 <div
@@ -346,20 +347,26 @@ const PersonalChat = ({
       <div className="p-4 bg-white/90 backdrop-blur-sm flex items-center border-t border-gray-100 shadow-lg">
         <button
           onClick={() => setShowPhotoInput(true)}
-          className="mr-3 p-3 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+          className="mr-3 p-3 rounded-full transition-colors" style={{backgroundColor: 'rgba(244, 75, 127, 0.1)', color: '#F44B7F'}}
         >
           <Camera size={18} className="text-gray-600" />
         </button>
 
         <input
-          className="flex-1 px-4 py-3 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent bg-gray-50/50 backdrop-blur-sm transition-all duration-200"
+          className="flex-1 px-4 py-3 rounded-2xl border focus:outline-none focus:ring-2 focus:border-transparent backdrop-blur-sm transition-all duration-200"
+          style={{
+            borderColor: 'rgba(244, 75, 127, 0.2)',
+            backgroundColor: 'rgba(255, 182, 185, 0.1)',
+            '--tw-ring-color': 'rgba(244, 75, 127, 0.3)'
+          }}
           placeholder="Type a message..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
         />
         <Button
-          className={`ml-3 px-6 py-3 bg-gradient-to-r from-flamingo-600 to-blush-600 hover:from-flamingo-700 hover:to-blush-700 text-white rounded-2xl font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
+          className="ml-3 px-6 py-3 text-white rounded-2xl font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          style={{background: 'linear-gradient(90deg, #F44B7F, #FFB6B9)'}}
           onClick={handleSend}
           disabled={!input.trim()}
         >
@@ -448,12 +455,12 @@ const ChatPageContent = ({
   return (
     <div className="max-w-md mx-auto h-screen bg-gradient-to-br from-flamingo-50 via-blush-25 to-coral-50 shadow-xl overflow-hidden flex flex-col relative pb-20">
       {/* Enhanced Header */}
-      <div className="px-6 py-6 bg-gradient-to-br from-flamingo-600 via-blush-600 to-royal-600 text-white shadow-xl relative overflow-hidden">
+      <div className="px-6 py-6 text-white shadow-xl relative overflow-hidden" style={{background: 'linear-gradient(135deg, #F44B7F 0%, #FFB6B9 50%, #FF6661 100%)'}}>
         {/* Animated Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-300/10 to-blue-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-rose-300/10 to-pink-400/10 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl" style={{background: 'linear-gradient(135deg, rgba(255, 182, 185, 0.1), rgba(255, 102, 97, 0.1))'}}></div>
+        <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full blur-2xl" style={{background: 'linear-gradient(135deg, rgba(244, 75, 127, 0.1), rgba(255, 182, 185, 0.1))'}}></div>
 
         <div className="relative z-10">
           <div className="flex items-center justify-between mb-6">
@@ -471,7 +478,7 @@ const ChatPageContent = ({
               </div>
             </div>
             {totalUnreadCount > 0 && (
-              <div className="bg-gradient-to-r from-flamingo-500 to-coral-600 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
+              <div className="backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20" style={{background: 'linear-gradient(90deg, #F44B7F, #FF6661)'}}>
                 <span className="text-sm font-bold flex items-center gap-2">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   {totalUnreadCount} new
@@ -482,18 +489,18 @@ const ChatPageContent = ({
 
           {/* Enhanced Search Bar */}
           <div className="relative group">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 h-5 w-5 group-focus-within:text-white/80 transition-colors duration-200" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/70 h-5 w-5 group-focus-within:text-white/90 transition-colors duration-200" />
             <Input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search conversations..."
-              className="w-full pl-12 pr-12 py-4 rounded-2xl border-0 bg-white/10 backdrop-blur-md text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:bg-white/20 transition-all duration-300 text-base font-medium shadow-inner"
+              className="w-full pl-12 pr-12 py-4 rounded-2xl border-0 bg-white/15 backdrop-blur-md text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/40 focus:bg-white/25 transition-all duration-300 text-base font-medium shadow-inner"
             />
             {search && (
               <button
                 onClick={() => setSearch("")}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white transition-colors duration-200 p-1 rounded-full hover:bg-white/10"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition-colors duration-200 p-1 rounded-full hover:bg-white/15"
               >
                 <X size={16} />
               </button>
@@ -521,9 +528,9 @@ const ChatPageContent = ({
         {/* Friends Section */}
         {friendChats.length > 0 && (
           <>
-            <div className="px-6 py-4 bg-gradient-to-r from-emerald-50/80 to-green-50/80 border-b border-emerald-100/50 backdrop-blur-sm">
-              <h3 className="text-sm font-bold text-emerald-700 flex items-center gap-3">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            <div className="px-6 py-4 border-b backdrop-blur-sm" style={{background: 'linear-gradient(90deg, rgba(255, 182, 185, 0.3), rgba(255, 102, 97, 0.2))'}}>
+              <h3 className="text-sm font-bold flex items-center gap-3" style={{color: '#8E44AD'}}>
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#F44B7F'}}></div>
                 <Heart className="h-4 w-4" />
                 Friends ({friendChats.length})
               </h3>
@@ -550,8 +557,8 @@ const ChatPageContent = ({
         {regularChats.length > 0 && (
           <>
             {friendChats.length > 0 && (
-              <div className="px-6 py-4 bg-gradient-to-r from-gray-50/80 to-slate-50/80 border-b border-gray-100/50 backdrop-blur-sm">
-                <h3 className="text-sm font-bold text-gray-700 flex items-center gap-3">
+              <div className="px-6 py-4 border-b backdrop-blur-sm" style={{background: 'linear-gradient(90deg, rgba(244, 75, 127, 0.1), rgba(255, 182, 185, 0.1))'}}>
+                <h3 className="text-sm font-bold flex items-center gap-3" style={{color: '#2FF2FF'}}>
                   <MessageCircle className="h-4 w-4" />
                   Recent Chats ({regularChats.length})
                 </h3>
@@ -598,7 +605,8 @@ const ChatPageContent = ({
               {!search && (
                 <Button
                   onClick={() => navigate("/video-chat")}
-                  className="bg-gradient-to-r from-flamingo-600 to-coral-600 hover:from-flamingo-700 hover:to-coral-700 text-white font-bold px-8 py-3 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                  className="text-white font-bold px-8 py-3 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                  style={{background: 'linear-gradient(90deg, #F44B7F, #FF6661)'}}
                 >
                   <Star className="h-4 w-4 mr-2" />
                   Start Chatting
@@ -638,13 +646,17 @@ const ChatItem = ({
     <div
       className={`flex items-center p-5 cursor-pointer relative transition-all duration-300 hover:bg-gradient-to-r hover:from-violet-50/60 hover:to-purple-50/60 hover:shadow-md transform hover:scale-[1.01] active:scale-[0.99] ${
         chat.isFriend
-          ? "bg-gradient-to-r from-emerald-50/40 to-green-50/40"
+          ? "bg-gradient-to-r from-emerald-50/40 to-green-50/40" 
           : "bg-white/60 backdrop-blur-sm"
       } ${
         chat.unreadCount > 0
-          ? "bg-gradient-to-r from-violet-50/80 to-purple-50/80 border-l-4 border-violet-400 shadow-sm"
+          ? "border-l-4 shadow-sm" 
           : "border-b border-gray-100/30"
       }`}
+      style={chat.unreadCount > 0 ? {
+        background: 'linear-gradient(90deg, rgba(255, 182, 185, 0.3), rgba(255, 102, 97, 0.2))',
+        borderLeftColor: '#F44B7F'
+      } : {}}
       onClick={() => {
         if (longPressedChatId !== chat.id) onChatClick(chat);
       }}
@@ -664,14 +676,14 @@ const ChatItem = ({
 
         {/* Unread Badge */}
         {chat.unreadCount > 0 && (
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-violet-500 to-purple-600 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse border-2 border-white">
+          <div className="absolute -top-2 -right-2 w-6 h-6 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-lg animate-pulse border-2 border-white" style={{background: 'linear-gradient(90deg, #F44B7F, #8E44AD)'}}>
             {chat.unreadCount > 9 ? "9+" : chat.unreadCount}
           </div>
         )}
 
         {/* Online Status */}
         {chat.isFriend && chat.time === "Online" && (
-          <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full shadow-sm animate-pulse"></div>
+          <div className="absolute -bottom-1 -right-1 w-4 h-4 border-2 border-white rounded-full shadow-sm animate-pulse" style={{backgroundColor: '#22c55e'}}></div>
         )}
 
         {/* Typing Indicator */}
@@ -688,14 +700,19 @@ const ChatItem = ({
             <h2
               className={`truncate transition-colors duration-200 ${
                 chat.unreadCount > 0
-                  ? "font-bold text-violet-700"
+                  ? "font-bold"
                   : "font-semibold text-gray-800"
               }`}
+              style={chat.unreadCount > 0 ? {color: '#F44B7F'} : {}}
             >
               {chat.name}
             </h2>
             {chat.isFriend && (
-              <span className="bg-gradient-to-r from-emerald-100/80 to-green-100/80 text-emerald-700 text-xs px-2 py-1 rounded-full font-semibold border border-emerald-200/50 backdrop-blur-sm flex-shrink-0">
+              <span className="text-xs px-2 py-1 rounded-full font-semibold border backdrop-blur-sm flex-shrink-0" style={{
+                background: 'linear-gradient(90deg, rgba(142, 68, 173, 0.1), rgba(142, 68, 173, 0.15))',
+                color: '#8E44AD',
+                borderColor: 'rgba(142, 68, 173, 0.3)'
+              }}>
                 Friend
               </span>
             )}
@@ -703,9 +720,10 @@ const ChatItem = ({
           <span
             className={`text-xs font-medium ml-3 flex-shrink-0 ${
               chat.unreadCount > 0
-                ? "text-violet-600 font-bold"
+                ? "font-bold"
                 : "text-gray-500"
             }`}
+            style={chat.unreadCount > 0 ? {color: '#F44B7F'} : {}}
           >
             {chat.time}
           </span>
@@ -731,9 +749,10 @@ const ChatItem = ({
             <p
               className={`text-sm truncate transition-colors duration-200 ${
                 chat.unreadCount > 0
-                  ? "text-gray-800 font-medium"
+                  ? "font-medium"
                   : "text-gray-600"
               }`}
+              style={chat.unreadCount > 0 ? {color: '#2FF2FF'} : {}}
             >
               {chat.lastMessage}
             </p>

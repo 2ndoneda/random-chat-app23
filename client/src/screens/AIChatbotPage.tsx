@@ -64,7 +64,7 @@ const AIChatbotPage: React.FC = () => {
       </Helmet>
       <main className="flex flex-col items-center min-h-screen w-full max-w-md mx-auto bg-white px-2 py-4 relative pb-20">
         {/* Header */}
-        <div className="w-full flex items-center p-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-bold text-xl rounded-t-2xl shadow-lg">
+        <div className="w-full flex items-center p-4 text-white font-bold text-xl rounded-t-2xl shadow-lg" style={{background: 'linear-gradient(90deg, #8E44AD, #F44B7F)'}}>
           <button 
             onClick={handleBackClick} 
             className="mr-3 text-white font-bold text-xl hover:scale-110 transition-transform"
@@ -86,14 +86,15 @@ const AIChatbotPage: React.FC = () => {
                 <div
                   className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl shadow-md ${
                     message.isUser
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
+                      ? 'text-white'
                       : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 border border-gray-300'
                   }`}
+                  style={message.isUser ? {background: 'linear-gradient(90deg, #F44B7F, #FFB6B9)'} : {}}
                 >
                   {!message.isUser && (
                     <div className="flex items-center gap-2 mb-2">
-                      <Bot className="h-4 w-4 text-purple-600" />
-                      <span className="text-xs font-semibold text-purple-600">AI Assistant</span>
+                      <Bot className="h-4 w-4" style={{color: '#8E44AD'}} />
+                      <span className="text-xs font-semibold" style={{color: '#8E44AD'}}>AI Assistant</span>
                     </div>
                   )}
                   <div className="leading-relaxed">{message.text}</div>
@@ -111,13 +112,13 @@ const AIChatbotPage: React.FC = () => {
               <div className="flex justify-start">
                 <div className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 border border-gray-300 max-w-xs px-4 py-3 rounded-2xl shadow-md">
                   <div className="flex items-center gap-2 mb-2">
-                    <Bot className="h-4 w-4 text-purple-600" />
-                    <span className="text-xs font-semibold text-purple-600">AI Assistant</span>
+                    <Bot className="h-4 w-4" style={{color: '#8E44AD'}} />
+                    <span className="text-xs font-semibold" style={{color: '#8E44AD'}}>AI Assistant</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                    <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+                    <div className="w-2 h-2 rounded-full animate-bounce" style={{backgroundColor: '#F44B7F'}}></div>
+                    <div className="w-2 h-2 rounded-full animate-bounce" style={{backgroundColor: '#F44B7F', animationDelay: '0.1s'}}></div>
+                    <div className="w-2 h-2 rounded-full animate-bounce" style={{backgroundColor: '#F44B7F', animationDelay: '0.2s'}}></div>
                   </div>
                 </div>
               </div>
@@ -125,18 +126,18 @@ const AIChatbotPage: React.FC = () => {
           </div>
 
           {/* Feature Notice */}
-          <div className="p-4 bg-gradient-to-r from-purple-50 to-blue-50 border-t border-purple-100">
+          <div className="p-4 border-t" style={{background: 'linear-gradient(90deg, rgba(255, 182, 185, 0.2), rgba(255, 102, 97, 0.1))', borderTopColor: 'rgba(244, 75, 127, 0.2)'}}>
             <div className="flex items-center gap-2 mb-2">
-              <Sparkles className="h-4 w-4 text-purple-600" />
-              <span className="text-sm font-semibold text-purple-700">Coming Soon!</span>
+              <Sparkles className="h-4 w-4" style={{color: '#F44B7F'}} />
+              <span className="text-sm font-semibold" style={{color: '#F44B7F'}}>Coming Soon!</span>
             </div>
-            <p className="text-xs text-purple-600">
+            <p className="text-xs" style={{color: '#8E44AD'}}>
               AI Chat Assistant is currently in development. This is a placeholder interface to demonstrate the feature.
             </p>
           </div>
 
           {/* Message Input */}
-          <div className="p-4 bg-white border-t border-purple-100">
+          <div className="p-4 bg-white border-t" style={{borderTopColor: 'rgba(244, 75, 127, 0.2)'}}>
             <div className="flex items-center gap-3">
               <Input
                 type="text"
@@ -144,13 +145,19 @@ const AIChatbotPage: React.FC = () => {
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message to AI..."
-                className="flex-1 px-4 py-3 rounded-full border border-purple-300 focus:ring-2 focus:ring-purple-400 bg-purple-50"
+                className="flex-1 px-4 py-3 rounded-full border focus:ring-2"
+                style={{
+                  borderColor: 'rgba(244, 75, 127, 0.3)',
+                  backgroundColor: 'rgba(255, 182, 185, 0.1)',
+                  '--tw-ring-color': 'rgba(244, 75, 127, 0.3)'
+                }}
                 disabled={isTyping}
               />
               <Button
                 onClick={handleSendMessage}
                 disabled={!inputMessage.trim() || isTyping}
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold shadow-md transform hover:scale-105 transition-all duration-200"
+                className="text-white px-6 py-3 rounded-full font-semibold shadow-md transform hover:scale-105 transition-all duration-200"
+                style={{background: 'linear-gradient(90deg, #F44B7F, #8E44AD)'}}
               >
                 <Send size={16} />
               </Button>
