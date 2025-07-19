@@ -172,7 +172,6 @@ export default function Home() {
         </title>
       </Helmet>
       <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-gradient-to-br from-peach-25 via-cream-50 to-blush-50 relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
-      <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-gradient-to-br from-snow-white via-blush-peach/10 to-coral-orange/5 relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
         {/* Enhanced Animated Background Elements with Indian flair */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-6 sm:top-10 left-6 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-flamingo-pink/30 to-coral-orange/40 rounded-full opacity-20 animate-pulse"></div>
@@ -205,33 +204,6 @@ export default function Home() {
             ✨
           </div>
           <div
-          800: "#006666",
-          900: "#003333",
-        },
-        royal: {
-          50: "#f5f0ff",
-          100: "#ebe0ff",
-          200: "#d7c0ff",
-          300: "#c3a0ff",
-          400: "#af80ff",
-          500: "#8E44AD", // Royal Violet
-          600: "#7a3a93",
-          700: "#663079",
-          800: "#52265f",
-          900: "#3e1c45",
-        },
-        gold: {
-          50: "#fffef5",
-          100: "#fffce6",
-          200: "#fff8cc",
-          300: "#fff4b3",
-          400: "#fff099",
-          500: "#F7C773", // Soft Gold
-          600: "#e6b85f",
-          700: "#d5a94b",
-          800: "#c49a37",
-          900: "#b38b23",
-        },
             className="absolute top-64 sm:top-80 right-4 sm:right-6 text-blush-400 text-xs sm:text-sm lg:text-base opacity-25 animate-bounce"
             style={{ animationDelay: "3s" }}
           >
