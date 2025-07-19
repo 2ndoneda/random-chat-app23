@@ -94,7 +94,7 @@ export default function PhotoSharingInput({
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="romantic-card rounded-3xl shadow-2xl max-w-md w-full overflow-hidden border border-passion-200">
         {/* Header */}
-        <div className="bg-gradient-to-r from-passion-600 to-romance-600 text-white p-6 relative">
+        <div className="bg-gradient-to-r from-flamingo-600 to-blush-600 text-white p-6 relative">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold">Share Photo</h2>
             <button
@@ -247,7 +247,7 @@ export default function PhotoSharingInput({
                   <Button
                     onClick={handleSendPhoto}
                     disabled={isUploading}
-                    className="flex-1 bg-gradient-to-r from-passion-600 to-romance-600 hover:from-passion-700 hover:to-romance-700"
+                    className="flex-1 bg-gradient-to-r from-flamingo-600 to-blush-600 hover:from-flamingo-700 hover:to-blush-700"
                   >
                     {isUploading ? (
                       <div className="flex flex-col items-center gap-1 w-full">

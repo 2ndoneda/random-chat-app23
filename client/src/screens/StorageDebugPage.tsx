@@ -120,9 +120,9 @@ export default function StorageDebugPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-passion-50 via-romance-25 to-bollywood-50">
+    <div className="min-h-screen bg-gradient-to-br from-flamingo-50 via-blush-25 to-coral-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-passion-600 via-romance-600 to-royal-600 text-white p-6 shadow-xl">
+      <div className="bg-gradient-to-r from-flamingo-600 via-blush-600 to-royal-600 text-white p-6 shadow-xl">
         <div className="max-w-md mx-auto flex items-center gap-4">
           <button
             onClick={() => navigate(-1)}

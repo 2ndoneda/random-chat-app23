@@ -174,37 +174,37 @@ export default function Home() {
       <main className="flex flex-col min-h-screen w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto bg-gradient-to-br from-peach-25 via-cream-50 to-blush-50 relative pb-16 sm:pb-20 lg:pb-24 overflow-hidden">
         {/* Enhanced Animated Background Elements with Indian flair */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-6 sm:top-10 left-6 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-sindoor-300 to-henna-400 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute top-20 sm:top-32 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-royal-300 to-gulmohar-400 rounded-full opacity-30 animate-bounce"></div>
+          <div className="absolute top-6 sm:top-10 left-6 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-flamingo-300 to-coral-400 rounded-full opacity-20 animate-pulse"></div>
+          <div className="absolute top-20 sm:top-32 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-royal-300 to-blush-400 rounded-full opacity-30 animate-bounce"></div>
           <div
-            className="absolute bottom-32 sm:bottom-40 left-4 sm:left-6 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-jasmine-300 to-sindoor-400 rounded-full opacity-25 animate-pulse"
+            className="absolute bottom-32 sm:bottom-40 left-4 sm:left-6 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-gold-300 to-flamingo-400 rounded-full opacity-25 animate-pulse"
             style={{ animationDelay: "1s" }}
           ></div>
           <div
-            className="absolute bottom-48 sm:bottom-60 right-8 sm:right-12 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-passion-400 to-royal-400 rounded-full opacity-20 animate-bounce"
+            className="absolute bottom-48 sm:bottom-60 right-8 sm:right-12 w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-flamingo-400 to-royal-400 rounded-full opacity-20 animate-bounce"
             style={{ animationDelay: "2s" }}
           ></div>
           {/* Add romantic Indian symbols */}
           <div
-            className="absolute top-16 sm:top-20 right-16 sm:right-20 text-sindoor-400 text-lg sm:text-xl lg:text-2xl opacity-40 animate-pulse"
+            className="absolute top-16 sm:top-20 right-16 sm:right-20 text-flamingo-400 text-lg sm:text-xl lg:text-2xl opacity-40 animate-pulse"
             style={{ animationDelay: "0.5s" }}
           >
             💕
           </div>
           <div
-            className="absolute bottom-64 sm:bottom-80 left-12 sm:left-16 text-henna-400 text-base sm:text-lg lg:text-xl opacity-35 animate-bounce"
+            className="absolute bottom-64 sm:bottom-80 left-12 sm:left-16 text-coral-400 text-base sm:text-lg lg:text-xl opacity-35 animate-bounce"
             style={{ animationDelay: "1.5s" }}
           >
             🌸
           </div>
           <div
-            className="absolute top-48 sm:top-60 left-6 sm:left-8 text-jasmine-400 text-sm sm:text-base lg:text-lg opacity-30 animate-pulse"
+            className="absolute top-48 sm:top-60 left-6 sm:left-8 text-gold-400 text-sm sm:text-base lg:text-lg opacity-30 animate-pulse"
             style={{ animationDelay: "2.5s" }}
           >
             ✨
           </div>
           <div
-            className="absolute top-64 sm:top-80 right-4 sm:right-6 text-gulmohar-400 text-xs sm:text-sm lg:text-base opacity-25 animate-bounce"
+            className="absolute top-64 sm:top-80 right-4 sm:right-6 text-blush-400 text-xs sm:text-sm lg:text-base opacity-25 animate-bounce"
             style={{ animationDelay: "3s" }}
           >
             🪷
@@ -212,10 +212,10 @@ export default function Home() {
         </div>
 
         {/* Enhanced Header with Indian romantic colors */}
-        <header className="w-full bg-gradient-to-r from-peach-400 via-coral-400 to-blush-500 shadow-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-b border-peach-200 relative overflow-hidden">
+        <header className="w-full bg-gradient-to-r from-flamingo-400 via-blush-400 to-coral-500 shadow-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-b border-flamingo-200 relative overflow-hidden">
           {/* Header Background Pattern with Indian touch */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/15 via-jasmine-100/25 to-white/15 backdrop-blur-sm"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-henna-200/15 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white/15 via-gold-100/25 to-white/15 backdrop-blur-sm"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-blush-200/15 to-transparent"></div>
 
           <div className="relative z-10 space-y-3">
             {/* Top Row: Logo left, Settings & Coins right */}
@@ -226,7 +226,7 @@ export default function Home() {
                   {t("app.name")}
                 </h1>
                 {isPremium && (
-                  <div className="flex items-center gap-1 bg-gradient-to-r from-jasmine-400 to-gulmohar-500 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-md">
+                  <div className="flex items-center gap-1 bg-gradient-to-r from-gold-400 to-royal-500 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full shadow-md">
                     <Crown className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                     <span className="text-white text-xs font-bold">PREMIUM</span>
                   </div>
@@ -248,7 +248,7 @@ export default function Home() {
                 <Button
                   onClick={() => setShowTreasureChest(true)}
                   disabled={coinsLoading}
-                  className="bg-gradient-to-r from-jasmine-500 to-gulmohar-600 hover:from-jasmine-600 hover:to-gulmohar-700 text-white font-semibold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 text-sm sm:text-base"
+                  className="bg-gradient-to-r from-gold-500 to-coral-600 hover:from-gold-600 hover:to-coral-700 text-white font-semibold px-3 sm:px-4 py-2 sm:py-2.5 rounded-full shadow-md transform hover:scale-105 transition-all duration-200 text-sm sm:text-base"
                 >
                   <Coins className="h-4 w-4 sm:h-5 sm:w-5 mr-1 sm:mr-2" />
                   {coinsLoading ? "..." : coins}
@@ -374,9 +374,9 @@ export default function Home() {
             <Button
               className={`w-full py-6 sm:py-8 lg:py-10 text-xl sm:text-2xl lg:text-3xl font-bold rounded-3xl sm:rounded-[2rem] text-white shadow-2xl transform transition-all duration-300 relative overflow-hidden animate-pulse hover:animate-none ${
                 isConnecting
-                  ? "bg-gradient-to-r from-coral-400 to-blush-500 scale-95"
+                  ? "bg-gradient-to-r from-blush-400 to-coral-500 scale-95"
                   : activeTab === "friends"
-                    ? "bg-gradient-to-r from-peach-500 via-coral-500 to-blush-600 hover:scale-105 hover:shadow-3xl hover:animate-bounce"
+                    ? "bg-gradient-to-r from-flamingo-500 via-blush-500 to-coral-600 hover:scale-105 hover:shadow-3xl hover:animate-bounce"
                     : "bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-600 hover:scale-105 hover:shadow-3xl hover:animate-bounce"
               }`}
               onClick={activeTab === "friends" ? handleStartCall : () => navigate("/ai-chatbot")}
@@ -384,7 +384,7 @@ export default function Home() {
               title={activeTab === "friends" ? "Takes <10 seconds to find your perfect match" : "Start chatting with AI assistant"}
             >
               {/* Button Background Animation */}
-              <div className="absolute inset-0 bg-gradient-to-r from-jasmine-200/40 via-white/25 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-200/40 via-white/25 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
               
               {/* Floating hearts animation */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -474,12 +474,12 @@ export default function Home() {
         {/* Floating Coin Store Button with Indian colors */}
         <button
           onClick={() => setShowTreasureChest(true)}
-          className="fixed bottom-20 sm:bottom-24 lg:bottom-28 right-3 sm:right-4 lg:right-6 bg-gradient-to-r from-peach-500 via-coral-500 to-blush-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-40 animate-pulse"
+          className="fixed bottom-20 sm:bottom-24 lg:bottom-28 right-3 sm:right-4 lg:right-6 bg-gradient-to-r from-flamingo-500 via-blush-500 to-coral-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-40 animate-pulse"
         >
           <div className="relative">
             <Coins className="h-5 w-5 sm:h-6 sm:w-6" />
             {coins > 0 && (
-              <div className="absolute -top-1.5 sm:-top-2 -right-1.5 sm:-right-2 bg-sindoor-500 text-white text-xs font-bold rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center shadow-md">
+              <div className="absolute -top-1.5 sm:-top-2 -right-1.5 sm:-right-2 bg-flamingo-500 text-white text-xs font-bold rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center shadow-md">
                 {coins > 99 ? "99+" : coins}
               </div>
             )}

@@ -230,7 +230,7 @@ const PersonalChat = ({
       className={`max-w-md mx-auto h-screen shadow-xl overflow-hidden flex flex-col relative pb-20 ${getWallpaperClass()}`}
     >
       {/* Enhanced Header */}
-      <div className="p-4 bg-gradient-to-r from-passion-600 via-romance-600 to-royal-600 flex items-center shadow-lg relative overflow-hidden">
+      <div className="p-4 bg-gradient-to-r from-flamingo-600 via-blush-600 to-royal-600 flex items-center shadow-lg relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
 
@@ -326,13 +326,13 @@ const PersonalChat = ({
               <div
                 className={`px-4 py-3 rounded-2xl max-w-xs shadow-sm transition-all duration-200 hover:shadow-md ${
                   msg.fromMe
-                    ? "bg-gradient-to-r from-passion-500 to-romance-600 text-white"
+                    ? "bg-gradient-to-r from-flamingo-500 to-blush-600 text-white"
                     : "bg-white/90 backdrop-blur-sm text-gray-800 border border-gray-100"
                 }`}
               >
                 <div className="leading-relaxed">{msg.text}</div>
                 <div
-                  className={`text-xs text-right mt-1 ${msg.fromMe ? "text-purple-100" : "text-gray-400"}`}
+                  className={`text-xs text-right mt-1 ${msg.fromMe ? "text-white/80" : "text-gray-400"}`}
                 >
                   {msg.time}
                 </div>
@@ -359,7 +359,7 @@ const PersonalChat = ({
           onKeyPress={handleKeyPress}
         />
         <Button
-          className="ml-3 px-6 py-3 bg-gradient-to-r from-passion-600 to-romance-600 hover:from-passion-700 hover:to-romance-700 text-white rounded-2xl font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          className={`ml-3 px-6 py-3 bg-gradient-to-r from-flamingo-600 to-blush-600 hover:from-flamingo-700 hover:to-blush-700 text-white rounded-2xl font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
           onClick={handleSend}
           disabled={!input.trim()}
         >
@@ -446,9 +446,9 @@ const ChatPageContent = ({
   };
 
   return (
-    <div className="max-w-md mx-auto h-screen bg-gradient-to-br from-passion-50 via-romance-25 to-bollywood-50 shadow-xl overflow-hidden flex flex-col relative pb-20">
+    <div className="max-w-md mx-auto h-screen bg-gradient-to-br from-flamingo-50 via-blush-25 to-coral-50 shadow-xl overflow-hidden flex flex-col relative pb-20">
       {/* Enhanced Header */}
-      <div className="px-6 py-6 bg-gradient-to-br from-passion-600 via-romance-600 to-royal-600 text-white shadow-xl relative overflow-hidden">
+      <div className="px-6 py-6 bg-gradient-to-br from-flamingo-600 via-blush-600 to-royal-600 text-white shadow-xl relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-pink-300/20 via-transparent to-transparent"></div>
@@ -471,7 +471,7 @@ const ChatPageContent = ({
               </div>
             </div>
             {totalUnreadCount > 0 && (
-              <div className="bg-gradient-to-r from-rose-500 to-pink-600 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
+              <div className="bg-gradient-to-r from-flamingo-500 to-coral-600 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
                 <span className="text-sm font-bold flex items-center gap-2">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
                   {totalUnreadCount} new
@@ -598,7 +598,7 @@ const ChatPageContent = ({
               {!search && (
                 <Button
                   onClick={() => navigate("/video-chat")}
-                  className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold px-8 py-3 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                  className="bg-gradient-to-r from-flamingo-600 to-coral-600 hover:from-flamingo-700 hover:to-coral-700 text-white font-bold px-8 py-3 rounded-2xl shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
                 >
                   <Star className="h-4 w-4 mr-2" />
                   Start Chatting
